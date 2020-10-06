@@ -1,0 +1,14 @@
+.list-item {
+  margin-bottom: 12px;
+}
+
+.list-item:last-child {
+  margin-bottom: 0;
+}
+/*
+ * Читается как: применить стили ко всем элементам с классом list-item,
+ * которые не являются последним ребёнком в коллекции.
+ */
+.list-item:not(:last-child) {
+  margin-bottom: 12px;
+}
