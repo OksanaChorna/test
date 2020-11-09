@@ -1,0 +1,41 @@
+.do-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  padding-bottom: 94px;
+
+  & .list {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.do-list {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-background-color;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+
+  &-card {
+    position: relative;
+  }
+}

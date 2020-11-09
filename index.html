@@ -12,49 +12,74 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
+
   <body>
     <!-- HEADER -->
     <header class="header">
       <div class="container">
-        <nav class="navigation">
-          <a class="logo link" href="./index.html"
-            ><span class="logo-name">Web</span>Studio</a
+        <a class="logo link" href="./index.html"
+          ><span class="logo-name">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="menu-btn"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="icon-close-burger"
+            width="40px"
+            height="40px"
+            aria-label="Переключатель мобильного меню"
           >
-          <ul class="list navigation-list">
-            <li class="navigation-item">
-              <a class="navigation-link link active" href="./index.html"
-                >Студия</a
-              >
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link link" href="./portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li class="navigation-item">
-              <a class="navigation-link link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="address">
-          <a class="address-link link" href="mailto:info@devstudio.com">
-            <svg class="envelope-icon" width="16px" height="12px">
-              <use href="./images/sprite.svg#icon-envelope"></use>
-            </svg>
-            info@devstudio.com</a
-          >
-          <a
-            class="address-link link telephone-number"
-            href="tel:+380961111111"
-          >
-            <svg class="smartphone-icon" width="10px" height="16px">
-              <use href="./images/sprite.svg#icon-smartphone"></use>
-            </svg>
-            +38 096 111 11 11</a
-          >
-        </address>
+            <use
+              class="icon-menu"
+              href="./images/sprite.svg#icon-menu-burger"
+            ></use>
+            <use
+              class="icon-cross"
+              href="./images/sprite.svg#icon-close-burger"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="navigation">
+            <ul class="list navigation-list">
+              <li class="navigation-item">
+                <a class="navigation-link link current" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation-item">
+                <a class="navigation-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <address class="header-address">
+            <a class="address-link link" href="mailto:info@devstudio.com">
+              <svg class="envelope-icon" width="16px" height="12px">
+                <use href="./images/sprite.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+            <a class="address-link link" href="tel:+380961111111">
+              <svg class="smartphone-icon" width="10px" height="16px">
+                <use href="./images/sprite.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11</a
+            >
+          </address>
+        </div>
       </div>
     </header>
 
@@ -62,59 +87,43 @@
       <!--HERO-->
       <section class="hero-section">
         <div class="container">
-          <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button class="modal-btn" type="button">Заказать услугу</button>
+          <h1 class="hero-title">
+            Эффективные решения <br />
+            для вашего бизнеса
+          </h1>
+          <button class="modal-btn" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
 
-      <!--FEATURES-->
-      <section class="features">
-        <!--скрытый заголовок-->
+      <!-- FEATURES -->
+      <section class="section features">
         <div class="container">
-          <h2 hidden>Особенности</h2>
+          <h2 class="visually-hidden">Особенности</h2>
           <ul class="list">
-            <li class="list-features features-antenna">
-              <!-- <div class="icon-container">
-                <svg class="features-icon">
-                  <use href="./images/sprite.svg#icon-antenna"></use>
-                </svg>
-              </div> -->
+            <li class="features-list features-antenna">
               <h3 class="features-subtitle">Внимание к деталям</h3>
               <p class="features-description">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
             </li>
-            <li class="list-features features-clock">
-              <!-- <div class="icon-container">
-                <svg class="features-icon">
-                  <use href="./images/sprite.svg#icon-clock"></use>
-                </svg>
-              </div> -->
+            <li class="features-list features-clock">
               <h3 class="features-subtitle">Пунктуальность</h3>
               <p class="features-description">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
             </li>
-            <li class="list-features features-diagram">
-              <!-- <div class="icon-container">
-                <svg class="features-icon">
-                  <use href="./images/sprite.svg#icon-diagram"></use>
-                </svg>
-              </div> -->
+            <li class="features-list features-diagram">
               <h3 class="features-subtitle">Планирование</h3>
               <p class="features-description">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
             </li>
-            <li class="list-features features-astronaut">
-              <!-- <div class="icon-container">
-                <svg class="features-icon">
-                  <use href="./images/sprite.svg#icon-astronaut"></use>
-                </svg>
-              </div> -->
+            <li class="features-list features-astronaut">
               <h3 class="features-subtitle">Современные технологии</h3>
               <p class="features-description">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -128,7 +137,7 @@
       <!--What are we do-->
       <section class="do-section">
         <div class="container">
-          <h2 class="do-title">Чем мы занимаемся</h2>
+          <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="list">
             <li class="do-list">
               <div class="do-list-card">
@@ -168,17 +177,62 @@
       </section>
 
       <!--OUR TEAM-->
-      <section class="our-team">
+      <section class="section our-team">
         <div class="container">
-          <h2 class="team-title">Наша команда</h2>
+          <h2 class="section-title">Наша команда</h2>
           <ul class="list our-team-list">
             <li class="team-list">
-              <img
-                src="./images/team/img.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/decktop/img_d-1x-webp.webp 1x,
+                    ./images/team/decktop/img_d-2x-webp.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/decktop/img_d-1x.jpg 1x,
+                    ./images/team/decktop/img_d-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_t-1x-webp.webp 1x,
+                    ./images/team/tablet/img_t-2x-webp.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_t-1x.jpg 1x,
+                    ./images/team/tablet/img_t-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_m-1x-webp.webp 1x,
+                    ./images/team/mobile/img_m-2x-webp.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_m-1x.jpg 1x,
+                    ./images/team/mobile/img_m-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/mobile/img_m-1x.jpg"
+                  alt="фото Игорь Демьяненко"
+                />
+              </picture>
               <div class="team-list-content">
                 <h3 class="team-subtitle">Игорь Демьяненко</h3>
                 <p lang="en" class="team-position">Product Designer</p>
@@ -227,12 +281,58 @@
               </div>
             </li>
             <li class="team-list">
-              <img
-                src="./images/team/img-1.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/decktop/img_2d-1x-webp.webp 1x,
+                    ./images/team/decktop/img_2d-2x-webp.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/decktop/img_2d-1x.jpg 1x,
+                    ./images/team/decktop/img_2d-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_2t-1x-webp.webp 1x,
+                    ./images/team/tablet/img_2t-2x-webp.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_2t-1x.jpg 1x,
+                    ./images/team/tablet/img_2t-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_2m-1x-webp.webp 1x,
+                    ./images/team/mobile/img_2m-2x-webp.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_2m-1x.jpg 1x,
+                    ./images/team/mobile/img_2m-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/mobile/img_2m-1x.jpg"
+                  alt="фото Ольга Репина"
+                />
+              </picture>
+
               <div class="team-list-content">
                 <h3 class="team-subtitle">Ольга Репина</h3>
                 <p lang="en" class="team-position">Frontend Developer</p>
@@ -281,12 +381,58 @@
               </div>
             </li>
             <li class="team-list">
-              <img
-                src="./images/team/img-2.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/decktop/img_3d-1x-webp.webp 1x,
+                    ./images/team/decktop/img_3d-2x-webp.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/decktop/img_3d-1x.jpg 1x,
+                    ./images/team/decktop/img_3d-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_3t-1x-webp.webp 1x,
+                    ./images/team/tablet/img_3t-2x-webp.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_3t-1x.jpg 1x,
+                    ./images/team/tablet/img_3t-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_3m-1x-webp.webp 1x,
+                    ./images/team/mobile/img_3m-2x-webp.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_3m-1x.jpg 1x,
+                    ./images/team/mobile/img_3m-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/mobile/img_3m-1x.jpg"
+                  alt="фото Николай Тарасов"
+                />
+              </picture>
+
               <div class="team-list-content">
                 <h3 class="team-subtitle">Николай Тарасов</h3>
                 <p lang="en" class="team-position">Marketing</p>
@@ -335,12 +481,58 @@
               </div>
             </li>
             <li class="team-list">
-              <img
-                src="./images/team/img-3.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/decktop/img_4d-1x-webp.webp 1x,
+                    ./images/team/decktop/img_4d-2x-webp.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/decktop/img_4d-1x.jpg 1x,
+                    ./images/team/decktop/img_4d-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_4t-1x-webp.webp 1x,
+                    ./images/team/tablet/img_4t-2x-webp.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/img_4t-1x.jpg 1x,
+                    ./images/team/tablet/img_4t-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_4m-1x-webp.webp 1x,
+                    ./images/team/mobile/img_4m-2x-webp.webp 2x
+                  "
+                  media="(min-width: 320px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/team/mobile/img_4m-1x.jpg 1x,
+                    ./images/team/mobile/img_4m-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="./images/team/mobile/img_4m-1x.jpg"
+                  alt="фото Михаил Ермаков"
+                />
+              </picture>
+
               <div class="team-list-content">
                 <h3 class="team-subtitle">Михаил Ермаков</h3>
                 <p lang="en" class="team-position">UI Designer</p>
@@ -391,10 +583,11 @@
           </ul>
         </div>
       </section>
+
       <!--Regular clients-->
-      <section class="clients">
+      <section class="section clients">
         <div class="container">
-          <h2 class="clients-title">Постоянные клиенты</h2>
+          <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="list clients-list">
             <li class="clients-list-items">
               <a class="clients-list-link" href="">
@@ -447,21 +640,23 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-address">
-          <a class="logo link logo-footer" href="./index.html"
+          <a class="logo link" href="./index.html"
             ><span class="logo-name">Web</span>Studio</a
           >
           <address>
             <ul class="list">
-              <li class="address-item footer-contacts">
+              <li class="footer-address-item footer-contacts">
                 г. Киев, пр-т Леси Украинки, 26
               </li>
               <li class="footer-contacts">
-                <a class="link contacts" href="mailto:info@devstudio.com"
+                <a
+                  class="link footer-contacts-item"
+                  href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
               </li>
               <li class="footer-contacts">
-                <a class="link contacts" href="tel:+380961111111"
+                <a class="link footer-contacts-item" href="tel:+380961111111"
                   >+38 096 111 11 11</a
                 >
               </li>
@@ -469,7 +664,7 @@
           </address>
         </div>
         <div class="join-social">
-          <h3 class="join">присоединяйтесь</h3>
+          <h3 class="join footer-subt">присоединяйтесь</h3>
           <ul class="list social-list">
             <li class="social-list-items">
               <a
@@ -504,7 +699,94 @@
             </li>
           </ul>
         </div>
+        <div class="mail-form-wrapper">
+          <h2 class="footer-subt">Подпишитесь на рассылку</h2>
+          <form action="#" class="mail-form">
+            <input
+              type="email"
+              name="user-email"
+              class="mail-form-input"
+              placeholder="E-mail"
+            />
+            <button class="mail-form-btn" type="submit">
+              Подписаться
+              <svg class="mail-form-btn-svg">
+                <use href="./images/sprite.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn-close" type="button" data-modal-close>
+          <svg class="modal-close-svg" width="18px" height="18px">
+            <use href="./images/sprite.svg#icon-close-black"></use>
+          </svg>
+        </button>
+        <h2 class="modal-form-title">
+          Оставьте свои данные, мы вам перезвоним
+        </h2>
+        <form action="#" class="modal-form">
+          <label class="modal-form-field"
+            >Имя
+            <span class="modal-form-field-wrapper"
+              ><input
+                type="text"
+                name="user-name"
+                class="modal-form-input" /><svg class="modal-form-svg">
+                <use href="./images/sprite.svg#icon-person-black"></use></svg
+            ></span>
+          </label>
+          <label class="modal-form-field"
+            >Телефон
+            <span class="modal-form-field-wrapper"
+              ><input
+                type="tel"
+                name="user-pfone"
+                class="modal-form-input" /><svg class="modal-form-svg">
+                <use href="./images/sprite.svg#icon-phone-black"></use></svg
+            ></span>
+          </label>
+          <label class="modal-form-field"
+            >Почта
+            <span class="modal-form-field-wrapper"
+              ><input
+                type="email"
+                name="user-mail"
+                class="modal-form-input" /><svg class="modal-form-svg">
+                <use href="./images/sprite.svg#icon-email-black"></use></svg
+            ></span>
+          </label>
+
+          <label class="modal-form-comment" for="comment">Комментарий </label>
+          <textarea
+            name="user-comment"
+            id="comment"
+            class="modal-form-comment-input"
+            placeholder="Введите текст"
+          ></textarea>
+
+          <div class="policy-wrapper">
+            <input
+              type="checkbox"
+              name="user-policy"
+              value="accept-policy"
+              id="check-policy"
+              class="modal-form-policy visually-hidden"
+            /><label for="check-policy" class="modal-form-policy-label"
+              >Соглашаюсь с рассылкой и принимаю&nbsp;<a href="#"
+                >Условия договора</a
+              ></label
+            >
+          </div>
+          <button class="modal-form-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

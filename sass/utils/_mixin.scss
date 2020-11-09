@@ -1,0 +1,24 @@
+@mixin font($ff, $fs, $fw, $fsz, $lh, $lsp) {
+  font-family: $ff;
+  font-style: $fs;
+  font-weight: $fw;
+  font-size: $fsz;
+  line-height: $lh;
+  letter-spacing: $lsp;
+}
+
+@mixin fontchoice(
+  $ff: $main-font,
+  $fs: normal,
+  $fw: 700,
+  $fsz: 24px,
+  $lh: 1.167,
+  $lsp: 0.03em
+) {
+  font-family: $ff;
+  font-style: $fs;
+  font-weight: $fw;
+  font-size: $fsz;
+  line-height: $lh;
+  letter-spacing: $lsp;
+}
